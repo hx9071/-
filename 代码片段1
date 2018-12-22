@@ -1,0 +1,13 @@
+#include<stdio.h>
+/*分鱼递归函数*/
+int fish(int n, int x)
+{
+    if((x-1)%5 == 0)
+    {
+        if(n == 1)
+            return 1;  /*递归出口*/
+        else
+            return fish(n-1, (x-1)/5*4);  /*递归调用*/
+    }
+    return 0;  /*x不是符合题意的解，返回0*/
+}
